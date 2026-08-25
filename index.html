@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medvedev — personal site</title>
-    <meta name="description" content="Личный сайт Medvedev: заметки, разработка небольших low-poly игр в Unity и портфолио демок.">
+    <title>Medvedev</title>
+    <meta name="description" content="Личный сайт Medvedev: портфолио, блог и контакты.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,62 +13,23 @@
 </head>
 <body>
 
-<div class="page-shell">
-    <header class="site-header">
-        <div class="brand-row">
-            <a href="index.html" class="brand-mark">
-                <span class="mark">M</span>
-                <span class="word">MEDVEDEV</span>
-            </a>
-            <span class="brand-sub">devlog &amp; portfolio</span>
+<div class="home-shell">
+    <div class="home-inner">
+        <h1 class="home-name">MEDVEDEV</h1>
+
+        <ul class="home-links">
+            <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="https://simorgh.space" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Radio Simorgh</a></li>
+            <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
+        </ul>
+
+        <!-- Замените на свои реальные почту и телеграм -->
+        <div class="home-contact">
+            <a href="mailto:you@example.com">YOU@EXAMPLE.COM</a>
+            <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">@YOUR_TELEGRAM</a>
         </div>
-        <nav class="tab-nav" aria-label="Main navigation">
-            <a href="index.html" class="is-active">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="home-hero">
-            <div class="eyebrow">Здравствуйте</div>
-            <h1 class="page-title">Делаю маленькие миры<br>и записываю, как это выходит.</h1>
-            <p class="lede">
-                Разрабатываю небольшие low-poly игры в Unity в эстетике PS1 и веду
-                открытый дневник разработки — что получилось, что сломалось и как
-                я это чинил.
-            </p>
-        </section>
-
-        <div class="quick-links">
-            <a href="portfolio.html" class="quick-link">
-                <div class="ql-label">Портфолио</div>
-                <div class="ql-title">Демки и прототипы →</div>
-                <div class="ql-desc">Ролики и билды из Unity</div>
-            </a>
-            <a href="blog.html" class="quick-link">
-                <div class="ql-label">Блог</div>
-                <div class="ql-title">Записи из дневника →</div>
-                <div class="ql-desc">Редкие, но честные заметки</div>
-            </a>
-            <a href="contact.html" class="quick-link">
-                <div class="ql-label">Контакты</div>
-                <div class="ql-title">Написать мне →</div>
-                <div class="ql-desc">Соцсети и почта</div>
-            </a>
-            <a href="https://simorgh.space" class="quick-link" target="_blank" rel="noopener noreferrer">
-                <div class="ql-label">Другой проект</div>
-                <div class="ql-title">Radio Simorgh →</div>
-                <div class="ql-desc">Онлайн-радио simorgh.space</div>
-            </a>
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <span>© 2026 Medvedev</span>
-        <a href="contact.html">Написать →</a>
-    </footer>
+    </div>
 </div>
 
 </body>
