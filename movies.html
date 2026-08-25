@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies — Medvedev</title>
+    <meta name="description" content="Просмотренные фильмы и оценки.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-name">MEDVEDEV</a>
+        <div class="sidebar-tag">devlog &amp; portfolio</div>
+
+        <ul class="sidebar-nav">
+            <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
+            <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
+            <li><a href="movies.html" class="is-active"><span class="arrow">↗</span>Movies</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
+            <li><a href="https://simorgh.space" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Radio</a></li>
+        </ul>
+
+        <!-- Замените на свои реальные почту и телеграм -->
+        <div class="sidebar-contact">
+            <a href="mailto:you@example.com">YOU@EXAMPLE.COM</a>
+            <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">@YOUR_TELEGRAM</a>
+        </div>
+    </aside>
+
+    <main class="content-pane">
+        <div class="section-label">Movies</div>
+        <h1 class="page-title">Просмотренное</h1>
+        <p class="lede" style="margin-bottom: 8px;">
+            Фильмы, которые посмотрел, с оценкой. Постеры разного качества —
+            но в сетке все одного размера.
+        </p>
+
+        <!--
+          ШАБЛОН КАРТОЧКИ — скопируйте .movie-card, чтобы добавить фильм.
+          1. Положите файл постера в папку posters/ (например posters/dune.jpg)
+          2. Замените src на свой файл, alt — на название
+          3. Впишите название и оценку
+          Постер любого размера/пропорций автоматически обрежется под 2:3.
+        -->
+        <div class="movie-grid">
+
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <!-- Замените на: <img src="posters/dune-2.jpg" alt="Dune: Part Two"> -->
+                    Постер
+                </div>
+                <div class="movie-title">Dune: Part Two</div>
+                <div class="movie-rating">9/10</div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster">
+                    Постер
+                </div>
+                <div class="movie-title">Blade Runner 2049</div>
+                <div class="movie-rating">10/10</div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster">
+                    Постер
+                </div>
+                <div class="movie-title">The Lighthouse</div>
+                <div class="movie-rating">7/10</div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+</body>
+</html>

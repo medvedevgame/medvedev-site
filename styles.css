@@ -376,3 +376,46 @@ h1.page-title {
     .sidebar-contact { flex-direction: row; gap: 16px; padding-top: 16px; margin-top: 0; }
     .content-pane { padding: 28px 20px 48px; }
 }
+
+/* ---------- Movies: fixed-size poster grid ---------- */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 22px 18px;
+    margin-top: 8px;
+}
+
+.movie-card { min-width: 0; }
+
+.movie-poster {
+    aspect-ratio: 2 / 3;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    font-size: 10px;
+    text-align: center;
+    padding: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.movie-poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.movie-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 8px;
+}
+
+.movie-rating {
+    font-size: 11px;
+    color: var(--blue);
+    font-weight: 600;
+    margin-top: 2px;
+}
