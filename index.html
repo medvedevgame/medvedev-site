@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksii Medvedev</title>
+    <title>Medvedev</title>
     <meta name="description" content="Личный сайт Medvedev: портфолио, блог и контакты.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -13,23 +13,41 @@
 </head>
 <body>
 
-<div class="home-shell">
-    <div class="home-inner">
-        <h1 class="home-name">MEDVEDEV</h1>
+<div class="layout">
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-name">MEDVEDEV</a>
+        <div class="sidebar-tag">devlog &amp; portfolio</div>
 
-        <ul class="home-links">
+        <ul class="sidebar-nav">
+            <li><a href="index.html" class="is-active"><span class="arrow">↗</span>Home</a></li>
             <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
             <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
-            <li><a href="https://simorgh.space" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Radio Simorgh</a></li>
             <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
+            <li><a href="https://simorgh.space" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Radio</a></li>
         </ul>
 
         <!-- Замените на свои реальные почту и телеграм -->
-        <div class="home-contact">
+        <div class="sidebar-contact">
             <a href="mailto:you@example.com">YOU@EXAMPLE.COM</a>
             <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">@YOUR_TELEGRAM</a>
         </div>
-    </div>
+    </aside>
+
+    <main class="content-pane">
+        <div class="section-label">Hello</div>
+        <h1 class="page-title">Делаю маленькие миры<br>и записываю, как это выходит.</h1>
+        <p class="lede">
+            Разрабатываю небольшие low-poly игры в Unity в эстетике PS1 и веду
+            открытый дневник разработки — что получилось, что сломалось и как
+            я это чинил.
+        </p>
+
+        <ul class="quick-links">
+            <li><a href="portfolio.html">Демки и прототипы <span class="arrow">↗</span></a></li>
+            <li><a href="blog.html">Записи из дневника <span class="arrow">↗</span></a></li>
+            <li><a href="contact.html">Написать мне <span class="arrow">↗</span></a></li>
+        </ul>
+    </main>
 </div>
 
 </body>

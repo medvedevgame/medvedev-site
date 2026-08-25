@@ -1,9 +1,9 @@
 /* =========================================================
    Medvedev — personal site
    Style: print/zine minimalism — white paper, black type,
-   one electric-blue accent for links, dashed rules as the
-   only structural device (references: link-list homepages,
-   receipt/zine layouts).
+   one electric-blue accent for links, dashed rules.
+   Layout: persistent left sidebar (name + nav + contact),
+   content pane on the right — same shell on every page.
    Type: IBM Plex Mono throughout.
    ========================================================= */
 
@@ -16,6 +16,7 @@
     --blue: #1a1aef;
     --line: #0a0a0a;
     --mono: "IBM Plex Mono", "Courier New", monospace;
+    --sidebar-w: 232px;
 }
 
 body {
@@ -35,42 +36,56 @@ a { color: var(--ink); }
     * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
 
-.page-shell {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
+/* ---------- Two-column shell ---------- */
 
-/* ---------- HOME: link-list layout (no header chrome) ---------- */
-
-.home-shell {
+.layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
     min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    padding: 64px 24px;
 }
 
-.home-inner { max-width: 520px; }
+/* ---------- Sidebar (persistent) ---------- */
 
-.home-name {
-    font-size: clamp(26px, 4vw, 34px);
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 40px 24px;
+    border-right: 1px dashed var(--line);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-name {
+    font-size: 19px;
     font-weight: 700;
     letter-spacing: 0.01em;
-    margin-bottom: 22px;
+    text-decoration: none;
+    color: var(--ink);
+    margin-bottom: 4px;
 }
 
-.home-links {
+.sidebar-tag {
+    font-size: 10px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 26px;
+}
+
+.sidebar-nav {
     list-style: none;
     display: grid;
     gap: 6px;
-    margin-bottom: 28px;
+    margin-bottom: auto;
 }
 
-.home-links a {
+.sidebar-nav a {
     display: inline-flex;
     align-items: baseline;
-    gap: 8px;
-    font-size: 20px;
+    gap: 7px;
+    font-size: 14.5px;
     font-weight: 500;
     text-decoration: none;
     color: var(--blue);
@@ -78,82 +93,34 @@ a { color: var(--ink); }
     letter-spacing: 0.02em;
 }
 
-.home-links a .arrow {
-    font-size: 15px;
-    transform: translateY(-1px);
-}
+.sidebar-nav a .arrow { font-size: 11px; }
 
-.home-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.sidebar-nav a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-.home-contact {
-    display: grid;
-    gap: 2px;
-    font-size: 12.5px;
+.sidebar-nav a.is-active {
     color: var(--ink);
-}
-
-.home-contact a { color: var(--ink); text-decoration: none; }
-.home-contact a:hover { color: var(--blue); }
-
-/* ---------- SUBPAGES: zine header with dashed rules ---------- */
-
-.site-header { padding: 28px 0 0; }
-
-.zine-name-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding-bottom: 12px;
-}
-
-.zine-name-row a.home-link {
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--ink);
-    letter-spacing: 0.02em;
-}
-
-.zine-name-row .zine-tag {
-    font-size: 10.5px;
-    color: var(--ink-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-}
-
-.dashed-rule {
-    border: none;
-    border-top: 1px dashed var(--ink);
-    height: 0;
-}
-
-.zine-nav {
-    display: flex;
-    gap: 20px;
-    padding: 10px 0;
-    flex-wrap: wrap;
-}
-
-.zine-nav a {
-    font-size: 12px;
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--ink-soft);
-}
-
-.zine-nav a:hover { color: var(--blue); }
-
-.zine-nav a.is-active {
-    color: var(--blue);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-/* ---------- Main content ---------- */
+.sidebar-contact {
+    display: grid;
+    gap: 2px;
+    font-size: 11px;
+    padding-top: 26px;
+    margin-top: 26px;
+    border-top: 1px dashed var(--line);
+}
 
-main { padding: 34px 0 64px; min-height: 45vh; }
+.sidebar-contact a { color: var(--ink); text-decoration: none; }
+.sidebar-contact a:hover { color: var(--blue); }
+
+/* ---------- Content pane ---------- */
+
+.content-pane {
+    padding: 40px 40px 64px;
+    min-width: 0;
+}
 
 .section-label {
     font-size: 11px;
@@ -181,6 +148,31 @@ h1.page-title {
 .text-block p { margin-bottom: 14px; }
 .text-block p:last-child { margin-bottom: 0; }
 .text-block a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+
+.quick-links {
+    list-style: none;
+    display: grid;
+    gap: 2px;
+    max-width: 420px;
+    margin-top: 8px;
+}
+
+.quick-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 2px;
+    border-bottom: 1px dashed var(--line);
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.quick-links a:hover { color: var(--blue); }
+.quick-links a .arrow { color: var(--ink-soft); }
+.quick-links a:hover .arrow { color: var(--blue); }
 
 /* ---------- Portfolio: receipt-style item rows ---------- */
 
@@ -227,10 +219,7 @@ h1.page-title {
 
 .specimen-desc { font-size: 13px; color: var(--ink); line-height: 1.6; }
 
-.specimen-side {
-    text-align: right;
-    white-space: nowrap;
-}
+.specimen-side { text-align: right; white-space: nowrap; }
 
 .specimen-status {
     display: block;
@@ -264,7 +253,7 @@ h1.page-title {
     font-size: 13px;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
     .specimen-row { grid-template-columns: 72px 1fr; }
     .specimen-side { grid-column: 1 / -1; text-align: left; display: flex; align-items: center; gap: 14px; margin-top: 4px; }
     .specimen-status { margin-bottom: 0; }
@@ -372,26 +361,18 @@ h1.page-title {
 .submit-btn:hover { background: var(--blue); }
 .submit-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
-/* ---------- Footer ---------- */
+/* ---------- Responsive: sidebar stacks on top ---------- */
 
-.site-footer {
-    border-top: 1px dashed var(--line);
-    padding: 18px 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 11px;
-    color: var(--ink-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.site-footer a { color: var(--ink-soft); text-decoration: none; }
-.site-footer a:hover { color: var(--blue); }
-
-@media (max-width: 560px) {
-    .page-shell { padding: 0 18px; }
-    .home-shell { padding: 48px 18px; }
+@media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar {
+        position: relative;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px dashed var(--line);
+        padding: 24px 20px;
+    }
+    .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 14px 18px; margin-bottom: 18px; }
+    .sidebar-contact { flex-direction: row; gap: 16px; padding-top: 16px; margin-top: 0; }
+    .content-pane { padding: 28px 20px 48px; }
 }

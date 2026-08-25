@@ -13,23 +13,27 @@
 </head>
 <body>
 
-<div class="page-shell">
-    <header class="site-header">
-        <div class="zine-name-row">
-            <a href="index.html" class="home-link">MEDVEDEV</a>
-            <span class="zine-tag">devlog &amp; portfolio</span>
-        </div>
-        <hr class="dashed-rule">
-        <nav class="zine-nav" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html" class="is-active">Portfolio</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <hr class="dashed-rule">
-    </header>
+<div class="layout">
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-name">MEDVEDEV</a>
+        <div class="sidebar-tag">devlog &amp; portfolio</div>
 
-    <main>
+        <ul class="sidebar-nav">
+            <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
+            <li><a href="portfolio.html" class="is-active"><span class="arrow">↗</span>Portfolio</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
+            <li><a href="https://simorgh.space" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Radio</a></li>
+        </ul>
+
+        <!-- Замените на свои реальные почту и телеграм -->
+        <div class="sidebar-contact">
+            <a href="mailto:you@example.com">YOU@EXAMPLE.COM</a>
+            <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">@YOUR_TELEGRAM</a>
+        </div>
+    </aside>
+
+    <main class="content-pane">
         <div class="section-label">Portfolio</div>
         <h1 class="page-title">Демки и прототипы</h1>
         <p class="lede" style="margin-bottom: 8px;">
@@ -69,11 +73,6 @@
 
         </div>
     </main>
-
-    <footer class="site-footer">
-        <span>© 2026 Medvedev</span>
-        <a href="contact.html">Написать →</a>
-    </footer>
 </div>
 
 </body>
