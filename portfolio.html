@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Medvedev</title>
+    <meta name="description" content="Портфолио демок и прототипов Unity: low-poly игры в стиле PS1.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page-shell">
+    <header class="site-header">
+        <div class="brand-row">
+            <a href="index.html" class="brand-mark">
+                <span class="mark">M</span>
+                <span class="word">MEDVEDEV</span>
+            </a>
+            <span class="brand-sub">devlog &amp; portfolio</span>
+        </div>
+        <nav class="tab-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html" class="is-active">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="eyebrow">Портфолио</div>
+        <h1 class="page-title">Демки и прототипы</h1>
+        <p class="lede" style="margin-bottom: 32px;">
+            Небольшие механики и сцены из моей low-poly игры в стиле PS1.
+            Видео — на Vimeo, здесь только карточки с описанием.
+        </p>
+
+        <!--
+          ШАБЛОН КАРТОЧКИ — скопируйте блок .specimen-card, чтобы добавить
+          новый проект. Замените thumbnail, статус, ссылку на Vimeo и текст.
+          Классы статуса: status-proto / status-progress / status-shipped
+        -->
+        <div class="specimen-grid">
+
+            <article class="specimen-card">
+                <span class="specimen-status status-progress">В разработке</span>
+                <div class="specimen-thumb">
+                    <!-- Замените на превью-картинку: <img src="thumbs/inspection.jpg" alt=""> -->
+                    Превью
+                </div>
+                <h2 class="specimen-title">Item Inspection System</h2>
+                <div class="specimen-meta">Unity · C# · PS1-style</div>
+                <p class="specimen-desc">
+                    Система осмотра предметов в духе Resident Evil: приближение
+                    камеры, вращение объекта, текст описания.
+                </p>
+                <a class="specimen-link" href="#" target="_blank" rel="noopener noreferrer">
+                    Смотреть на Vimeo
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </article>
+
+            <div class="specimen-empty">
+                Ещё демки скоро появятся здесь.
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <span>© 2026 Medvedev</span>
+        <a href="contact.html">Написать →</a>
+    </footer>
+</div>
+
+</body>
+</html>

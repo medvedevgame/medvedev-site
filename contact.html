@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Medvedev</title>
+    <meta name="description" content="Связаться с Medvedev: соцсети и форма для письма напрямую на почту.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page-shell">
+    <header class="site-header">
+        <div class="brand-row">
+            <a href="index.html" class="brand-mark">
+                <span class="mark">M</span>
+                <span class="word">MEDVEDEV</span>
+            </a>
+            <span class="brand-sub">devlog &amp; portfolio</span>
+        </div>
+        <nav class="tab-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="is-active">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="eyebrow">Контакты</div>
+        <h1 class="page-title">Написать мне</h1>
+        <p class="lede" style="margin-bottom: 32px;">
+            Пишите по любым вопросам — предложения, отзывы о демках, просто
+            поздороваться.
+        </p>
+
+        <div class="contact-grid">
+            <div>
+                <div class="contact-block-label">Соцсети</div>
+                <div class="social-stack">
+                    <!-- Замените href на свои ссылки, при необходимости добавьте/удалите строки -->
+                    <a class="social-btn" href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">
+                        Telegram <span class="arrow">→</span>
+                    </a>
+                    <a class="social-btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">
+                        GitHub <span class="arrow">→</span>
+                    </a>
+                    <a class="social-btn" href="https://YOURNAME.itch.io" target="_blank" rel="noopener noreferrer">
+                        itch.io <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <div class="contact-block-label">Письмо на почту</div>
+                <!--
+                  Форма отправляет письмо на вашу почту через Formspree.
+                  1. Зарегистрируйтесь на https://formspree.io (бесплатно)
+                  2. Создайте форму, привяжите свою почту
+                  3. Замените YOUR_FORM_ID ниже на ID из Formspree
+                -->
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-field">
+                        <label for="email">Ваша почта</label>
+                        <input type="email" id="email" name="_replyto" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Привет!"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <span>© 2026 Medvedev</span>
+        <a href="contact.html">Написать →</a>
+    </footer>
+</div>
+
+</body>
+</html>
