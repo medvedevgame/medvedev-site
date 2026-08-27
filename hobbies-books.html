@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="layout-3col">
+<div class="layout-4col">
     <aside class="sidebar">
         <a href="index.html" class="sidebar-name">MEDVEDEV</a>
         <div class="sidebar-tag">devlog &amp; portfolio</div>
@@ -65,7 +65,7 @@
         </ul>
     </nav>
 
-    <section class="detail-pane">
+    <section class="grid-pane">
         <div class="section-label">Books</div>
         <h1 class="page-title">Read</h1>
         <p class="lede" style="margin-bottom: 8px;">
@@ -73,20 +73,22 @@
         </p>
 
         <!--
-          CARD TEMPLATE — copy .poster-card to add a book.
-          1. Put the cover file in a covers/ folder (e.g. covers/dune.jpg)
-          2. Replace src with your file, alt with the book title
-          3. Fill in the title and rating
-          4. Optionally add a .poster-link with a URL (e.g. to Goodreads)
+          CARD TEMPLATE — copy one .poster-card to add a title.
+          1. Put the cover file in a covers/ folder (e.g. covers/name.jpg)
+          2. Replace src with your file, alt with the title
+          3. Fill in the title, rating/meta, and optional .poster-link
+          4. The title's href points to its own note page — duplicate
+             this file to "hobbies-books-yourslug.html", replace .note-pane
+             with that title's note, and mark its card class="poster-card is-active"
         -->
+
         <div class="poster-grid">
 
             <div class="poster-card">
                 <div class="poster-thumb aspect-portrait">
-                    <!-- Replace with: <img src="covers/dune.jpg" alt="Dune"> -->
                     Cover
                 </div>
-                <div class="poster-title">Dune</div>
+                <a href="hobbies-books-dune.html" class="poster-title">Dune</a>
                 <div class="poster-meta">9/10</div>
                 <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Goodreads <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
             </div>
@@ -95,7 +97,7 @@
                 <div class="poster-thumb aspect-portrait">
                     Cover
                 </div>
-                <div class="poster-title">Neuromancer</div>
+                <a href="hobbies-books-neuromancer.html" class="poster-title">Neuromancer</a>
                 <div class="poster-meta">8/10</div>
                 <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Goodreads <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
             </div>
@@ -104,12 +106,16 @@
                 <div class="poster-thumb aspect-portrait">
                     Cover
                 </div>
-                <div class="poster-title">The Stranger</div>
+                <a href="hobbies-books-the-stranger.html" class="poster-title">The Stranger</a>
                 <div class="poster-meta">10/10</div>
                 <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Goodreads <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
             </div>
 
         </div>
+    </section>
+
+    <section class="note-pane">
+        <div class="detail-empty">Select a title to see notes ←</div>
     </section>
 </div>
 

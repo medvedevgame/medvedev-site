@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music — Medvedev</title>
-    <meta name="description" content="Albums I've been listening to.">
+    <title>Mobile Suit Zeta Gundam, 1985 — Medvedev</title>
+    <meta name="description" content="Notes on Mobile Suit Zeta Gundam, 1985.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
         <div class="list-pane-label">Hobbies</div>
         <ul>
             <li>
-                <a href="hobbies-music.html" class="is-active">
+                <a href="hobbies-music.html">
                     <span class="item-name">Music</span>
                 </a>
             </li>
@@ -58,7 +58,7 @@
                 </a>
             </li>
             <li>
-                <a href="hobbies-anime.html">
+                <a href="hobbies-anime.html" class="is-active">
                     <span class="item-name">Anime</span>
                 </a>
             </li>
@@ -66,10 +66,10 @@
     </nav>
 
     <section class="grid-pane">
-        <div class="section-label">Music</div>
-        <h1 class="page-title">Albums</h1>
+        <div class="section-label">Anime</div>
+        <h1 class="page-title">Watched</h1>
         <p class="lede" style="margin-bottom: 8px;">
-            Albums on repeat lately. Covers are square, unlike the vertical covers on the other pages.
+            Anime I've watched, with a rating.
         </p>
 
         <!--
@@ -78,53 +78,29 @@
           2. Replace src with your file, alt with the title
           3. Fill in the title, rating/meta, and optional .poster-link
           4. The title's href points to its own note page — duplicate
-             this file to "hobbies-music-yourslug.html", replace .note-pane
+             this file to "hobbies-anime-yourslug.html", replace .note-pane
              with that title's note, and mark its card class="poster-card is-active"
         -->
 
         <div class="poster-grid">
 
-            <div class="poster-card">
-                <div class="poster-thumb aspect-square">
-                    Cover
+            <div class="poster-card is-active">
+                <div class="poster-thumb aspect-portrait">
+                    <img src="covers/gundam_z.jpeg" alt="gundam_z">
                 </div>
-                <a href="hobbies-music-discovery.html" class="poster-title">Discovery</a>
-                <div class="poster-meta">Daft Punk</div>
-                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-            </div>
-
-            <div class="poster-card">
-                <div class="poster-thumb aspect-square">
-                    Cover
-                </div>
-                <a href="hobbies-music-in-rainbows.html" class="poster-title">In Rainbows</a>
-                <div class="poster-meta">Radiohead</div>
-                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-            </div>
-
-            <div class="poster-card">
-                <div class="poster-thumb aspect-square">
-                    Cover
-                </div>
-                <a href="hobbies-music-currents.html" class="poster-title">Currents</a>
-                <div class="poster-meta">Tame Impala</div>
-                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
-            </div>
-
-            <div class="poster-card">
-                <div class="poster-thumb aspect-square">
-                    Cover
-                </div>
-                <a href="hobbies-music-blonde.html" class="poster-title">Blonde</a>
-                <div class="poster-meta">Frank Ocean</div>
-                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+                <a href="hobbies-anime-gundam-z.html" class="poster-title">Mobile Suit Zeta Gundam, 1985</a>
+                <div class="poster-meta">8/10</div>
+                <a class="poster-link" href="https://ru.wikipedia.org/wiki/Mobile_Suit_Zeta_Gundam" target="_blank" rel="noopener noreferrer">Wiki <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
             </div>
 
         </div>
     </section>
 
     <section class="note-pane">
-        <div class="detail-empty">Select a title to see notes ←</div>
+        <h1 class="page-title" style="margin-bottom: 10px;">Mobile Suit Zeta Gundam, 1985</h1>
+        <div class="text-block">
+            <p>Your notes about this go here.</p>
+        </div>
     </section>
 </div>
 

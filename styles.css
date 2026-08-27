@@ -411,11 +411,15 @@ h1.page-title {
 .poster-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .poster-title {
+    display: block;
     font-size: 12px;
     font-weight: 700;
     line-height: 1.3;
     margin-top: 8px;
+    text-decoration: none;
 }
+
+a.poster-title:hover { text-decoration: none; }
 
 .poster-meta {
     font-size: 11px;
@@ -439,6 +443,42 @@ h1.page-title {
 
 .poster-link:hover { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 .poster-link svg { width: 9px; height: 9px; }
+
+.poster-card.is-active .poster-thumb { border-color: var(--blue); }
+
+/* ---------- Four-column layout: sidebar / hobby list / grid / note ----------
+   Used by category pages (e.g. Movies) and their per-title note pages.
+   Clicking a title in the grid opens its note in column 4; the grid
+   itself stays identical across every page in the category, same
+   pattern as the hobby list in column 2. */
+
+.layout-4col {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 190px 320px 1fr;
+    min-height: 100vh;
+}
+
+.grid-pane {
+    border-right: 1px dashed var(--line);
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.note-pane {
+    padding: 40px 40px 64px;
+    min-width: 0;
+    overflow-y: auto;
+}
+
+@media (max-width: 1180px) {
+    .layout-4col { grid-template-columns: 1fr; }
+    .layout-4col .sidebar { position: relative; height: auto; border-right: none; border-bottom: 1px dashed var(--line); padding: 24px 20px; }
+    .layout-4col .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 14px 18px; margin-bottom: 18px; }
+    .layout-4col .sidebar-contact { flex-direction: row; gap: 16px; padding-top: 16px; margin-top: 0; }
+    .layout-4col .list-pane { border-right: none; border-bottom: 1px dashed var(--line); padding: 20px; }
+    .layout-4col .grid-pane { border-right: none; border-bottom: 1px dashed var(--line); padding: 20px; }
+    .layout-4col .note-pane { padding: 24px 20px 48px; }
+}
 
 /* ---------- Three-column layout: sidebar / list / detail ----------
    Used by sections with a sub-list (Blog, Hobbies). Column 2 shows
