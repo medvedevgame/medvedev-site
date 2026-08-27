@@ -10,11 +10,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --paper: #ffffff;
-    --ink: #0a0a0a;
-    --ink-soft: #6b6b6b;
-    --blue: #1a1aef;
-    --line: #0a0a0a;
+    --paper: #f1ece0;
+    --ink: #2b2a24;
+    --ink-soft: #7d7566;
+    --blue: #1a3aa8;
+    --line: #2b2a24;
     --mono: "IBM Plex Mono", "Courier New", monospace;
     --sidebar-w: 232px;
 }
@@ -458,17 +458,6 @@ h1.page-title {
     overflow-y: auto;
 }
 
-.list-pane-label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--ink-soft);
-    margin-bottom: 4px;
-}
-
-.list-pane-label::after { content: "—"; display: block; margin-top: 2px; color: var(--ink-soft); margin-bottom: 16px; }
-
 .list-pane ul { list-style: none; display: grid; }
 
 .list-pane li { border-top: 1px dashed var(--line); }
@@ -529,4 +518,52 @@ h1.page-title {
     .layout-3col .list-pane { border-right: none; border-bottom: 1px dashed var(--line); padding: 20px; }
     .layout-3col .detail-pane { padding: 24px 20px 48px; }
     .detail-empty { padding: 24px; }
+}
+
+/* ---------- Close control ----------
+   Appears only on the deepest currently-open pane; steps back
+   exactly one level (e.g. a hobby category back to the hobby list,
+   the hobby list back to Home). Replaces the old repeated section
+   label at the top of each pane. */
+
+.pane-close-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+}
+
+.close-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1;
+    background: var(--paper);
+}
+
+.close-btn:hover { background: var(--ink); color: var(--paper); }
+
+/* ---------- Blog post images ----------
+   Copy this block into a post's .text-block to embed an image,
+   with an optional caption underneath. */
+
+.post-image {
+    margin: 18px 0;
+    border: 1px solid var(--ink);
+}
+
+.post-image img { width: 100%; display: block; }
+
+.post-image figcaption {
+    padding: 8px 10px;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-top: 1px dashed var(--line);
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — Medvedev</title>
-    <meta name="description" content="Devlog: notes on working on Unity projects and other things.">
+    <title>Test post — Medvedev</title>
+    <meta name="description" content="Test post demonstrating the image block format.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,9 +33,6 @@
     </aside>
 
     <nav class="list-pane" aria-label="Blog posts">
-        <div class="pane-close-row">
-            <a class="close-btn" href="index.html" aria-label="Close">×</a>
-        </div>
     <!--
       POST LIST — this .list-pane block repeats identically on
       blog.html and on every individual post page, so the list
@@ -48,7 +45,7 @@
     -->
         <ul>
             <li>
-                <a href="blog-test-post.html">
+                <a href="blog-test-post.html" class="is-active">
                     <span class="item-date">Aug 27, 2026</span>
                     <span class="item-name">Test post</span>
                 </a>
@@ -63,7 +60,35 @@
     </nav>
 
     <section class="detail-pane">
-        <div class="detail-empty">Select an entry ←</div>
+        <div class="pane-close-row">
+            <a class="close-btn" href="blog.html" aria-label="Close">×</a>
+        </div>
+        <div class="section-label">Aug 27, 2026</div>
+        <h1 class="page-title">Test post</h1>
+        <div class="text-block">
+            <p>
+                This post exists to keep a copy-pasteable format for adding
+                an image to a future post. Use the block below — swap the
+                src and alt, and drop or edit the caption.
+            </p>
+
+            <!--
+              IMAGE BLOCK — copy this whole <figure> into any post's
+              .text-block to add a picture. Put the image file itself
+              in an images/ folder in the repo (e.g. images/photo.jpg).
+              The figcaption line is optional — delete it if you don't
+              need a caption.
+            -->
+            <figure class="post-image">
+                <img src="images/example.jpg" alt="Describe the image here">
+                <figcaption>Optional caption goes here.</figcaption>
+            </figure>
+
+            <p>
+                Text can continue normally after an image, and you can add
+                more than one image block in the same post.
+            </p>
+        </div>
     </section>
 </div>
 

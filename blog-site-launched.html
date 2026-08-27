@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — Medvedev</title>
-    <meta name="description" content="Devlog: notes on working on Unity projects and other things.">
+    <title>Site launched — Medvedev</title>
+    <meta name="description" content="Notes on launching the site.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,9 +33,6 @@
     </aside>
 
     <nav class="list-pane" aria-label="Blog posts">
-        <div class="pane-close-row">
-            <a class="close-btn" href="index.html" aria-label="Close">×</a>
-        </div>
     <!--
       POST LIST — this .list-pane block repeats identically on
       blog.html and on every individual post page, so the list
@@ -54,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="blog-site-launched.html">
+                <a href="blog-site-launched.html" class="is-active">
                     <span class="item-date">Aug 24, 2026</span>
                     <span class="item-name">Site launched</span>
                 </a>
@@ -63,7 +60,22 @@
     </nav>
 
     <section class="detail-pane">
-        <div class="detail-empty">Select an entry ←</div>
+        <div class="pane-close-row">
+            <a class="close-btn" href="blog.html" aria-label="Close">×</a>
+        </div>
+        <div class="section-label">Aug 24, 2026</div>
+        <h1 class="page-title">Site launched</h1>
+        <div class="text-block">
+            <p>
+                Moved my personal site into its own project — portfolio,
+                blog, hobbies and contact now live here, separate from the
+                radio.
+            </p>
+            <p>
+                The menu on the left stays put, and the rest of the site
+                opens in extra columns to the right, one level at a time.
+            </p>
+        </div>
     </section>
 </div>
 
