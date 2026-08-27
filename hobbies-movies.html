@@ -75,37 +75,41 @@
         </p>
 
         <!--
-          CARD TEMPLATE — copy .movie-card to add a movie.
-          1. Put the poster file in a posters/ folder (e.g. posters/dune.jpg)
+          CARD TEMPLATE — copy .poster-card to add a movie.
+          1. Put the poster file in a covers/ folder (e.g. covers/dune.jpg)
           2. Replace src with your file, alt with the title
           3. Fill in the title and rating
+          4. Optionally add a .poster-link with a URL (e.g. to Letterboxd)
           Any poster size/ratio gets auto-cropped to 2:3.
         -->
-        <div class="movie-grid">
+        <div class="poster-grid">
 
-            <div class="movie-card">
-                <div class="movie-poster">
-                    <!-- Replace with: <img src="posters/dune-2.jpg" alt="Dune: Part Two"> -->
+            <div class="poster-card">
+                <div class="poster-thumb aspect-portrait">
+                    <!-- Replace with: <img src="covers/dune-2.jpg" alt="Dune: Part Two"> -->
                     Poster
                 </div>
-                <div class="movie-title">Dune: Part Two</div>
-                <div class="movie-rating">9/10</div>
+                <div class="poster-title">Dune: Part Two</div>
+                <div class="poster-meta">9/10</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Letterboxd <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
             </div>
 
-            <div class="movie-card">
-                <div class="movie-poster">
+            <div class="poster-card">
+                <div class="poster-thumb aspect-portrait">
                     Poster
                 </div>
-                <div class="movie-title">Blade Runner 2049</div>
-                <div class="movie-rating">10/10</div>
+                <div class="poster-title">Blade Runner 2049</div>
+                <div class="poster-meta">10/10</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Letterboxd <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
             </div>
 
-            <div class="movie-card">
-                <div class="movie-poster">
+            <div class="poster-card">
+                <div class="poster-thumb aspect-portrait">
                     Poster
                 </div>
-                <div class="movie-title">The Lighthouse</div>
-                <div class="movie-rating">7/10</div>
+                <div class="poster-title">The Lighthouse</div>
+                <div class="poster-meta">7/10</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Letterboxd <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
             </div>
 
         </div>

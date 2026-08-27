@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music — Medvedev</title>
-    <meta name="description" content="Music I listen to.">
+    <meta name="description" content="Albums I've been listening to.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,6 +44,7 @@
         <ul>
             <li>
                 <a href="hobbies-music.html" class="is-active">
+                    <span class="item-meta">4 albums</span>
                     <span class="item-name">Music</span>
                 </a>
             </li>
@@ -55,11 +56,13 @@
             </li>
             <li>
                 <a href="hobbies-books.html">
+                    <span class="item-meta">3 read</span>
                     <span class="item-name">Books</span>
                 </a>
             </li>
             <li>
                 <a href="hobbies-anime.html">
+                    <span class="item-meta">3 watched</span>
                     <span class="item-name">Anime</span>
                 </a>
             </li>
@@ -68,8 +71,61 @@
 
     <section class="detail-pane">
         <div class="section-label">Music</div>
-        <h1 class="page-title">Music</h1>
-        <p class="lede">Coming soon.</p>
+        <h1 class="page-title">Albums</h1>
+        <p class="lede" style="margin-bottom: 8px;">
+            Albums on repeat lately. Covers are square, unlike the vertical
+            covers on the other pages.
+        </p>
+
+        <!--
+          CARD TEMPLATE — copy .poster-card to add an album.
+          Keep the "aspect-square" class — that's what makes covers square
+          instead of vertical like Movies/Books/Anime.
+          1. Put the cover file in a covers/ folder (e.g. covers/discovery.jpg)
+          2. Replace src with your file, alt with the album title
+          3. Fill in the title and artist/note
+          4. Optionally add a .poster-link with a URL (e.g. to Spotify)
+        -->
+        <div class="poster-grid">
+
+            <div class="poster-card">
+                <div class="poster-thumb aspect-square">
+                    <!-- Replace with: <img src="covers/discovery.jpg" alt="Discovery"> -->
+                    Cover
+                </div>
+                <div class="poster-title">Discovery</div>
+                <div class="poster-meta">Daft Punk</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+            </div>
+
+            <div class="poster-card">
+                <div class="poster-thumb aspect-square">
+                    Cover
+                </div>
+                <div class="poster-title">In Rainbows</div>
+                <div class="poster-meta">Radiohead</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+            </div>
+
+            <div class="poster-card">
+                <div class="poster-thumb aspect-square">
+                    Cover
+                </div>
+                <div class="poster-title">Currents</div>
+                <div class="poster-meta">Tame Impala</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+            </div>
+
+            <div class="poster-card">
+                <div class="poster-thumb aspect-square">
+                    Cover
+                </div>
+                <div class="poster-title">Blonde</div>
+                <div class="poster-meta">Frank Ocean</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">Listen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+            </div>
+
+        </div>
     </section>
 </div>
 
