@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime — Medvedev</title>
+    <meta name="description" content="Anime I've watched.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout-3col">
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-name">MEDVEDEV</a>
+        <div class="sidebar-tag">devlog &amp; portfolio</div>
+
+        <ul class="sidebar-nav">
+            <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
+            <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
+            <li><a href="hobbies.html" class="is-active"><span class="arrow">↗</span>Hobbies</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
+        </ul>
+
+        <!-- Replace with your real email and Telegram -->
+        <div class="sidebar-contact">
+            <a href="mailto:you@example.com">YOU@EXAMPLE.COM</a>
+            <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">@YOUR_TELEGRAM</a>
+        </div>
+    </aside>
+
+    <!--
+      HOBBY LIST — this .list-pane block repeats identically on
+      hobbies.html and on every hobbies-*.html page. To add a new
+      hobby: create hobbies-name.html, add a new <li> here AND in
+      every other hobbies-*.html file, then mark it is-active there.
+    -->
+    <nav class="list-pane" aria-label="Hobbies list">
+        <div class="list-pane-label">Hobbies</div>
+        <ul>
+            <li>
+                <a href="hobbies-music.html">
+                    <span class="item-name">Music</span>
+                </a>
+            </li>
+            <li>
+                <a href="hobbies-movies.html">
+                    <span class="item-meta">3 watched</span>
+                    <span class="item-name">Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="hobbies-books.html">
+                    <span class="item-name">Books</span>
+                </a>
+            </li>
+            <li>
+                <a href="hobbies-anime.html" class="is-active">
+                    <span class="item-name">Anime</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="detail-pane">
+        <div class="section-label">Anime</div>
+        <h1 class="page-title">Anime</h1>
+        <p class="lede">Coming soon.</p>
+    </section>
+</div>
+
+</body>
+</html>

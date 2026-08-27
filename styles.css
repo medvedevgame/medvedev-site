@@ -419,3 +419,94 @@ h1.page-title {
     font-weight: 600;
     margin-top: 2px;
 }
+
+/* ---------- Three-column layout: sidebar / list / detail ----------
+   Used by sections with a sub-list (Blog, Hobbies). Column 2 shows
+   the list of items in that section; column 3 shows the selected
+   item's content. Same list markup repeats on every detail page so
+   the list appears "static" while only column 3 changes. */
+
+.layout-3col {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 210px 1fr;
+    min-height: 100vh;
+}
+
+.list-pane {
+    border-right: 1px dashed var(--line);
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.list-pane-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+}
+
+.list-pane-label::after { content: "—"; display: block; margin-top: 2px; color: var(--ink-soft); margin-bottom: 16px; }
+
+.list-pane ul { list-style: none; display: grid; }
+
+.list-pane li { border-top: 1px dashed var(--line); }
+.list-pane li:last-child { border-bottom: 1px dashed var(--line); }
+
+.list-pane a {
+    display: block;
+    padding: 12px 2px;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.list-pane a .item-date,
+.list-pane a .item-meta {
+    display: block;
+    font-size: 9.5px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+.list-pane a .item-name { font-size: 13px; font-weight: 600; line-height: 1.35; }
+
+.list-pane a:hover .item-name { color: var(--blue); }
+
+.list-pane a.is-active .item-name { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.list-pane a.is-active .item-date,
+.list-pane a.is-active .item-meta { color: var(--blue); }
+
+.detail-pane {
+    padding: 40px 40px 64px;
+    min-width: 0;
+    overflow-y: auto;
+}
+
+.detail-empty {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 40px;
+}
+
+@media (max-width: 980px) {
+    /* No JS on this site, so instead of hiding a pane we stack all
+       three: sidebar, then the list, then the selected item's
+       content, in reading order. */
+    .layout-3col { grid-template-columns: 1fr; }
+    .layout-3col .sidebar { position: relative; height: auto; border-right: none; border-bottom: 1px dashed var(--line); padding: 24px 20px; }
+    .layout-3col .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 14px 18px; margin-bottom: 18px; }
+    .layout-3col .sidebar-contact { flex-direction: row; gap: 16px; padding-top: 16px; margin-top: 0; }
+    .layout-3col .list-pane { border-right: none; border-bottom: 1px dashed var(--line); padding: 20px; }
+    .layout-3col .detail-pane { padding: 24px 20px 48px; }
+    .detail-empty { padding: 24px; }
+}

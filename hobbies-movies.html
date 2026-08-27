@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies — Medvedev</title>
+    <meta name="description" content="Movies I've watched, with ratings.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout-3col">
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-name">MEDVEDEV</a>
+        <div class="sidebar-tag">devlog &amp; portfolio</div>
+
+        <ul class="sidebar-nav">
+            <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
+            <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
+            <li><a href="hobbies.html" class="is-active"><span class="arrow">↗</span>Hobbies</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
+        </ul>
+
+        <!-- Replace with your real email and Telegram -->
+        <div class="sidebar-contact">
+            <a href="mailto:you@example.com">YOU@EXAMPLE.COM</a>
+            <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">@YOUR_TELEGRAM</a>
+        </div>
+    </aside>
+
+    <!--
+      HOBBY LIST — this .list-pane block repeats identically on
+      hobbies.html and on every hobbies-*.html page. To add a new
+      hobby: create hobbies-name.html, add a new <li> here AND in
+      every other hobbies-*.html file, then mark it is-active there.
+    -->
+    <nav class="list-pane" aria-label="Hobbies list">
+        <div class="list-pane-label">Hobbies</div>
+        <ul>
+            <li>
+                <a href="hobbies-music.html">
+                    <span class="item-name">Music</span>
+                </a>
+            </li>
+            <li>
+                <a href="hobbies-movies.html" class="is-active">
+                    <span class="item-meta">3 watched</span>
+                    <span class="item-name">Movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="hobbies-books.html">
+                    <span class="item-name">Books</span>
+                </a>
+            </li>
+            <li>
+                <a href="hobbies-anime.html">
+                    <span class="item-name">Anime</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="detail-pane">
+        <div class="section-label">Movies</div>
+        <h1 class="page-title">Watched</h1>
+        <p class="lede" style="margin-bottom: 8px;">
+            Movies I've watched, with a rating. Posters come in different
+            sizes, but the grid keeps them uniform.
+        </p>
+
+        <!--
+          CARD TEMPLATE — copy .movie-card to add a movie.
+          1. Put the poster file in a posters/ folder (e.g. posters/dune.jpg)
+          2. Replace src with your file, alt with the title
+          3. Fill in the title and rating
+          Any poster size/ratio gets auto-cropped to 2:3.
+        -->
+        <div class="movie-grid">
+
+            <div class="movie-card">
+                <div class="movie-poster">
+                    <!-- Replace with: <img src="posters/dune-2.jpg" alt="Dune: Part Two"> -->
+                    Poster
+                </div>
+                <div class="movie-title">Dune: Part Two</div>
+                <div class="movie-rating">9/10</div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster">
+                    Poster
+                </div>
+                <div class="movie-title">Blade Runner 2049</div>
+                <div class="movie-rating">10/10</div>
+            </div>
+
+            <div class="movie-card">
+                <div class="movie-poster">
+                    Poster
+                </div>
+                <div class="movie-title">The Lighthouse</div>
+                <div class="movie-rating">7/10</div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

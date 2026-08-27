@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog — Medvedev</title>
-    <meta name="description" content="Дневник разработки: заметки о работе над Unity-проектами и не только.">
+    <meta name="description" content="Devlog: notes on working on Unity projects and other things.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="layout">
+<div class="layout-3col">
     <aside class="sidebar">
         <a href="index.html" class="sidebar-name">MEDVEDEV</a>
         <div class="sidebar-tag">devlog &amp; portfolio</div>
@@ -21,40 +21,55 @@
         <ul class="sidebar-nav">
             <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
             <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
+            <li><a href="hobbies.html"><span class="arrow">↗</span>Hobbies</a></li>
             <li><a href="blog.html" class="is-active"><span class="arrow">↗</span>Blog</a></li>
-            <li><a href="movies.html"><span class="arrow">↗</span>Movies</a></li>
             <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
-            <li><a href="https://simorgh.space" target="_blank" rel="noopener noreferrer"><span class="arrow">↗</span>Radio</a></li>
         </ul>
 
-        <!-- Замените на свои реальные почту и телеграм -->
+        <!-- Replace with your real email and Telegram -->
         <div class="sidebar-contact">
             <a href="mailto:you@example.com">YOU@EXAMPLE.COM</a>
             <a href="https://t.me/YOUR_TELEGRAM" target="_blank" rel="noopener noreferrer">@YOUR_TELEGRAM</a>
         </div>
     </aside>
 
-    <main class="content-pane">
-        <div class="section-label">Blog</div>
-        <h1 class="page-title">Записи</h1>
+    <!--
+      POST LIST — this .list-pane block repeats identically on
+      blog.html and on every individual post page, so the list
+      looks "static". To add a new post:
+      1. Copy this file to blog-post-slug.html
+      2. In the NEW file, replace .detail-pane with the new post's text
+      3. Add a new <li> here AND in every other blog-*.html file
+         (newest on top)
+      4. In the new file, mark the new <li> as class="is-active"
+    -->
+    <nav class="list-pane" aria-label="Blog posts">
+        <div class="list-pane-label">Entries</div>
+        <ul>
+            <li>
+                <a href="blog.html" class="is-active">
+                    <span class="item-date">Aug 24, 2026</span>
+                    <span class="item-name">Site launched</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-        <!--
-          ШАБЛОН ЗАПИСИ — скопируйте .log-entry, чтобы добавить новый пост.
-          Новые записи добавляйте сверху (последняя — первая).
-        -->
-        <div class="log-list">
-
-            <article class="log-entry">
-                <div class="log-date">24 августа 2026</div>
-                <h2 class="log-title">Сайт запущен</h2>
-                <p class="log-text">
-                    Перенёс личный сайт на отдельный проект — портфолио, блог
-                    и контакты теперь живут здесь, отдельно от радио.
-                </p>
-            </article>
-
+    <section class="detail-pane">
+        <div class="section-label">August 24, 2026</div>
+        <h1 class="page-title">Site launched</h1>
+        <div class="text-block">
+            <p>
+                Moved my personal site into its own project — portfolio,
+                blog, hobbies and contact now live here, separate from the
+                radio.
+            </p>
+            <p>
+                The menu on the left stays put, and this section and
+                "Hobbies" open in two columns: a list and its content.
+            </p>
         </div>
-    </main>
+    </section>
 </div>
 
 </body>
