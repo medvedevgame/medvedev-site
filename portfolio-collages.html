@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio — Aleksii Medvedev</title>
-    <meta name="description" content="Portfolio: collages, animation, social media, 3D models and game dev.">
+    <title>Collages — Aleksii Medvedev</title>
+    <meta name="description" content="Portfolio: collages.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,9 +34,6 @@
     </aside>
 
     <nav class="list-pane" aria-label="Portfolio categories">
-        <div class="pane-close-row">
-            <a class="close-btn" href="index.html" aria-label="Close">×</a>
-        </div>
     <!--
       CATEGORY LIST — this .list-pane block repeats identically on
       portfolio.html and on every portfolio-*.html page. To add a new
@@ -45,7 +42,7 @@
     -->
         <ul>
             <li>
-                <a href="portfolio-collages.html">
+                <a href="portfolio-collages.html" class="is-active">
                     <span class="item-name">Collages</span>
                 </a>
             </li>
@@ -74,9 +71,29 @@
 
     <section class="detail-pane">
         <div class="pane-close-row">
-            <span class="close-btn is-placeholder" aria-hidden="true">×</span>
+            <a class="close-btn" href="portfolio.html" aria-label="Close">×</a>
         </div>
-        <div class="detail-empty">Choose a category on the left ←</div>
+        <h1 class="page-title">Collages</h1>
+
+        <!--
+          CARD TEMPLATE — copy one .poster-card to add a project.
+          1. Put the image file in a covers/ folder (e.g. covers/name.jpg)
+          2. Replace the "Cover" placeholder with <img src="covers/name.jpg" alt="...">
+          3. Fill in the title, a short meta tag, and the link
+        -->
+
+        <div class="poster-grid grid-lg">
+
+            <div class="poster-card">
+                <div class="poster-thumb aspect-square">
+                    Cover
+                </div>
+                <div class="poster-title">Untitled Collage</div>
+                <div class="poster-meta">Photoshop</div>
+                <a class="poster-link" href="#" target="_blank" rel="noopener noreferrer">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+            </div>
+
+        </div>
     </section>
 </div>
 
