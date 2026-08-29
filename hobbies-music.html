@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music — Medvedev</title>
+    <title>Music — Aleksii Medvedev</title>
     <meta name="description" content="Albums I've been listening to.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -15,14 +15,15 @@
 
 <div class="layout-3col">
     <aside class="sidebar">
-        <a href="index.html" class="sidebar-name">MEDVEDEV</a>
+        <a href="index.html" class="sidebar-name">ALEKSII MEDVEDEV</a>
         <div class="sidebar-tag">devlog &amp; portfolio</div>
 
         <ul class="sidebar-nav">
-            <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
             <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
             <li><a href="hobbies.html" class="is-active"><span class="arrow">↗</span>Hobbies</a></li>
-            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="about.html"><span class="arrow">↗</span>About</a></li>
+            <li><a href="tags.html"><span class="arrow">↗</span>Tags</a></li>
             <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
         </ul>
 
@@ -64,9 +65,6 @@
     </nav>
 
     <section class="detail-pane">
-        <div class="pane-close-row">
-            <a class="close-btn" href="hobbies.html" aria-label="Close">×</a>
-        </div>
         <h1 class="page-title">Albums</h1>
         <p class="lede" style="margin-bottom: 8px;">
             Albums on repeat lately. Covers are square, unlike the vertical covers on the other pages.
@@ -77,6 +75,7 @@
           1. Put the cover file in a covers/ folder (e.g. covers/name.jpg)
           2. Replace src with your file, alt with the title
           3. Fill in the title, rating/meta, and optional .poster-link
+          4. Add or edit hashtags in .tag-row — link each to tags-<name>.html
         -->
 
         <div class="poster-grid">
@@ -87,6 +86,9 @@
                 </div>
                 <div class="poster-title">Nowhere Signal</div>
                 <div class="poster-meta">Unknown Artist</div>
+                <div class="tag-row">
+                    <a href="tags-music.html" class="tag-link">#music</a>
+                </div>
             </div>
 
         </div>

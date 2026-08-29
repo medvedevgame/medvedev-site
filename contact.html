@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — Aleksii Medvedev</title>
-    <meta name="description" content="Get in touch with Aleksii Medvedev: social links and a form that emails you directly.">
+    <meta name="description" content="Get in touch with Aleksii Medvedev.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,11 +19,11 @@
         <div class="sidebar-tag">devlog &amp; portfolio</div>
 
         <ul class="sidebar-nav">
-            <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
-            <li><a href="about.html"><span class="arrow">↗</span>About</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
             <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
             <li><a href="hobbies.html"><span class="arrow">↗</span>Hobbies</a></li>
-            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="about.html"><span class="arrow">↗</span>About</a></li>
+            <li><a href="tags.html"><span class="arrow">↗</span>Tags</a></li>
             <li><a href="contact.html" class="is-active"><span class="arrow">↗</span>Contact</a></li>
         </ul>
 
@@ -34,52 +34,26 @@
     </aside>
 
     <main class="content-pane">
-        <div class="pane-close-row">
-            <a class="close-btn" href="index.html" aria-label="Close">×</a>
-        </div>
         <h1 class="page-title">Get in touch</h1>
         <p class="lede" style="margin-bottom: 8px;">
             Feel free to write about anything — ideas, feedback on the
             demos, or just to say hi.
         </p>
 
-        <div class="contact-grid">
-            <div>
-                <div class="section-label" style="margin-bottom: 14px;">Social</div>
-                <div class="social-stack">
-                    <!-- Replace href with your real links, add/remove rows as needed -->
-                    <a class="social-btn" href="https://t.me/simorghdiet" target="_blank" rel="noopener noreferrer">
-                        Telegram <span class="arrow">↗</span>
-                    </a>
-                    <a class="social-btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">
-                        GitHub <span class="arrow">↗</span>
-                    </a>
-                    <a class="social-btn" href="https://YOURNAME.itch.io" target="_blank" rel="noopener noreferrer">
-                        itch.io <span class="arrow">↗</span>
-                    </a>
-                </div>
-            </div>
-
-            <div>
-                <div class="section-label" style="margin-bottom: 14px;">Send an email</div>
-                <!--
-                  This form emails you directly via Formspree.
-                  1. Sign up at https://formspree.io (free)
-                  2. Create a form and connect your email (pogladilgolubya@gmail.com)
-                  3. Replace YOUR_FORM_ID below with the ID from Formspree
-                -->
-                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <div class="form-field">
-                        <label for="email">Your email</label>
-                        <input type="email" id="email" name="_replyto" required placeholder="you@example.com">
-                    </div>
-                    <div class="form-field">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Hi!"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send</button>
-                </form>
-            </div>
+        <!-- Replace href values with your real links, add/remove rows as needed -->
+        <div class="social-stack" style="max-width: 420px;">
+            <a class="social-btn" href="mailto:pogladilgolubya@gmail.com">
+                Email <span class="arrow">↗</span>
+            </a>
+            <a class="social-btn" href="https://t.me/simorghdiet" target="_blank" rel="noopener noreferrer">
+                Telegram <span class="arrow">↗</span>
+            </a>
+            <a class="social-btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener noreferrer">
+                GitHub <span class="arrow">↗</span>
+            </a>
+            <a class="social-btn" href="https://YOURNAME.itch.io" target="_blank" rel="noopener noreferrer">
+                itch.io <span class="arrow">↗</span>
+            </a>
         </div>
     </main>
 </div>
