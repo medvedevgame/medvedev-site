@@ -519,39 +519,6 @@ h1.page-title {
     .detail-empty { padding: 24px; }
 }
 
-/* ---------- Close control ----------
-   Appears only on the deepest currently-open pane; steps back
-   exactly one level (e.g. a hobby category back to the hobby list,
-   the hobby list back to Home). Replaces the old repeated section
-   label at the top of each pane. */
-
-.pane-close-row {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 18px;
-}
-
-.close-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    border: 1px solid var(--ink);
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 13px;
-    line-height: 1;
-    background: var(--paper);
-}
-
-.close-btn:hover { background: var(--ink); color: var(--paper); }
-
-.close-btn.is-placeholder {
-    visibility: hidden;
-    pointer-events: none;
-}
-
 /* ---------- Blog post images ----------
    Copy this block into a post's .text-block to embed an image,
    with an optional caption underneath. */
@@ -603,3 +570,63 @@ h1.page-title {
 .about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .about-text { flex: 1 1 260px; min-width: 220px; }
+
+/* ---------- Tags ----------
+   A small hashtag row that can sit under any poster-card or at the
+   end of a blog post. Each tag links to /tags-<slug>.html. */
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    margin-top: 8px;
+}
+
+.tag-link {
+    font-size: 10.5px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.tag-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.tag-link.is-current {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Simplified text-only results list for a tag's matching pages —
+   no images, just a title linking to the page that has this tag. */
+
+.tag-results {
+    list-style: none;
+    display: grid;
+    max-width: 58ch;
+    margin-top: 8px;
+}
+
+.tag-results li { border-top: 1px dashed var(--line); }
+.tag-results li:last-child { border-bottom: 1px dashed var(--line); }
+
+.tag-results a {
+    display: block;
+    padding: 12px 2px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.tag-results a .result-context {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin-bottom: 3px;
+}
+
+.tag-results a:hover { color: var(--blue); }

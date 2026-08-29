@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags — Aleksii Medvedev</title>
+    <meta name="description" content="Browse the site by tag.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout-3col">
+    <aside class="sidebar">
+        <a href="index.html" class="sidebar-name">ALEKSII MEDVEDEV</a>
+        <div class="sidebar-tag">devlog &amp; portfolio</div>
+
+        <ul class="sidebar-nav">
+            <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
+            <li><a href="about.html"><span class="arrow">↗</span>About</a></li>
+            <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
+            <li><a href="hobbies.html"><span class="arrow">↗</span>Hobbies</a></li>
+            <li><a href="tags.html" class="is-active"><span class="arrow">↗</span>Tags</a></li>
+            <li><a href="blog.html"><span class="arrow">↗</span>Blog</a></li>
+            <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
+        </ul>
+
+        <div class="sidebar-contact">
+            <a href="mailto:pogladilgolubya@gmail.com">POGLADILGOLUBYA@GMAIL.COM</a>
+            <a href="https://t.me/simorghdiet" target="_blank" rel="noopener noreferrer">@SIMORGHDIET</a>
+        </div>
+    </aside>
+
+    <nav class="list-pane" aria-label="Tags list">
+    <!--
+      TAG LIST — every tag on the site appears here, and this block
+      repeats identically on tags.html and every tags-*.html page.
+      To register a NEW tag: add a new <li> here AND in every other
+      tags-*.html file, then create tags-yourtag.html for it.
+    -->
+        <ul>
+            <li>
+                <a href="tags-anime.html">
+                    <span class="item-name">#anime</span>
+                </a>
+            </li>
+            <li>
+                <a href="tags-movies.html">
+                    <span class="item-name">#movies</span>
+                </a>
+            </li>
+            <li>
+                <a href="tags-books.html">
+                    <span class="item-name">#books</span>
+                </a>
+            </li>
+            <li>
+                <a href="tags-music.html">
+                    <span class="item-name">#music</span>
+                </a>
+            </li>
+            <li>
+                <a href="tags-design.html">
+                    <span class="item-name">#design</span>
+                </a>
+            </li>
+            <li>
+                <a href="tags-gamedev.html">
+                    <span class="item-name">#gamedev</span>
+                </a>
+            </li>
+            <li>
+                <a href="tags-devlog.html">
+                    <span class="item-name">#devlog</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="detail-pane">
+        <div class="detail-empty">Choose a tag on the left ←</div>
+    </section>
+</div>
+
+</body>
+</html>

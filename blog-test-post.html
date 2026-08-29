@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test post — Medvedev</title>
+    <title>Test post — Aleksii Medvedev</title>
     <meta name="description" content="Test post demonstrating the image block format.">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -20,8 +20,10 @@
 
         <ul class="sidebar-nav">
             <li><a href="index.html"><span class="arrow">↗</span>Home</a></li>
+            <li><a href="about.html"><span class="arrow">↗</span>About</a></li>
             <li><a href="portfolio.html"><span class="arrow">↗</span>Portfolio</a></li>
             <li><a href="hobbies.html"><span class="arrow">↗</span>Hobbies</a></li>
+            <li><a href="tags.html"><span class="arrow">↗</span>Tags</a></li>
             <li><a href="blog.html" class="is-active"><span class="arrow">↗</span>Blog</a></li>
             <li><a href="contact.html"><span class="arrow">↗</span>Contact</a></li>
         </ul>
@@ -47,22 +49,20 @@
             <li>
                 <a href="blog-test-post.html" class="is-active">
                     <span class="item-date">Aug 27, 2026</span>
-                    <span class="item-name">First post</span>
+                    <span class="item-name">Test post</span>
                 </a>
             </li>
-           
         </ul>
     </nav>
 
     <section class="detail-pane">
-        <div class="pane-close-row">
-            <a class="close-btn" href="blog.html" aria-label="Close">×</a>
-        </div>
         <div class="section-label">Aug 27, 2026</div>
-        <h1 class="page-title">First post</h1>
+        <h1 class="page-title">Test post</h1>
         <div class="text-block">
             <p>
-                The site is currently in test mode. The Portfolio, <a href="hobbies.html"> Hobbies (with art reviews),</a> and Blog pages are live. I will complete development shortly.
+                This post exists to keep a copy-pasteable format for adding
+                an image to a future post. Use the block below — swap the
+                src and alt, and drop or edit the caption.
             </p>
 
             <!--
@@ -73,14 +73,18 @@
               need a caption.
             -->
             <figure class="post-image">
-                <img src="covers/blog_1.png" alt="Describe the image here">
-                <figcaption>screen form my github</figcaption>
+                <img src="images/example.jpg" alt="Describe the image here">
+                <figcaption>Optional caption goes here.</figcaption>
             </figure>
 
             <p>
-                I will complete development shortly.
+                Text can continue normally after an image, and you can add
+                more than one image block in the same post.
             </p>
         </div>
+                <div class="tag-row">
+                    <a href="tags-devlog.html" class="tag-link">#devlog</a>
+                </div>
     </section>
 </div>
 
